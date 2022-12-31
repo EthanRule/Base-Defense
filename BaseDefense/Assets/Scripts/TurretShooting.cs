@@ -14,7 +14,10 @@ public class TurretShooting : MonoBehaviour
         * Assigning the particle system of the game object. You can do it this way or just drag the particle system directly in the Unity Editor.
         */
         this.particleSystem = GetComponent<ParticleSystem>();
+
+        // Access the shape module of the particle system
         var shapeOfParticle = this.particleSystem.shape;
+        
         // Randomize the direction which the particles go to.
         shapeOfParticle.randomDirectionAmount = 1;
     }
